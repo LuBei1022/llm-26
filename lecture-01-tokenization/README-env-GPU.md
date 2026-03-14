@@ -35,6 +35,45 @@ python -m spacy download en_core_web_sm
 python -m spacy download zh_core_web_sm
 ```
 
+### 4. Install Ollama CLI (for local LLM inference)
+
+The `ollama-python` package in the conda environment is only the Python client library.
+To actually run local models (e.g. `ollama serve`, `ollama run llama3`), you need to install the Ollama CLI separately.
+
+#### Option A: With sudo privileges
+
+```bash
+curl -fsSL https://ollama.com/install.sh | sh
+```
+
+This installs Ollama system-wide to `/usr/local` and sets up a systemd service.
+
+#### Option B: Without sudo privileges (manual install)
+
+Download the release binary and install it to your home directory:
+
+```bash
+mkdir -p ~/opt/ollama ~/bin
+curl -L -o /tmp/ollama-linux-amd64.tar.zst \
+  https://github.com/ollama/ollama/releases/latest/download/ollama-linux-amd64.tar.zst
+tar -C ~/opt/ollama -xf /tmp/ollama-linux-amd64.tar.zst
+ln -sf ~/opt/ollama/bin/ollama ~/bin/ollama
+rm -f /tmp/ollama-linux-amd64.tar.zst
+```
+
+Then add `~/bin` to your PATH (only needed once):
+
+```bash
+echo 'export PATH="$HOME/bin:$PATH"' >> ~/.bashrc
+source ~/.bashrc
+```
+
+To start the Ollama server manually (since there is no systemd service in this mode):
+
+```bash
+ollama serve    # run in a separate terminal, keep it running
+```
+
 ## Verification
 
 Run the following commands to verify that everything is set up correctly:
@@ -59,6 +98,13 @@ gpu= NVIDIA GeForce RTX 5090
 ```bash
 python -c "import spacy; spacy.load('en_core_web_sm'); print('en ok')"
 python -c "import spacy; spacy.load('zh_core_web_sm'); print('zh ok')"
+```
+
+**Check Ollama:**
+
+```bash
+ollama --version
+python -c "import ollama; print('ollama-python ok')"
 ```
 
 ## Tested Environment
