@@ -213,5 +213,10 @@ kenlm
 gpt-2
 <<<<<<< HEAD
 **/.DS_Store
-.idea
-**/kenlm
+=======
+.DS_Store
+datasets/
+>>>>>>> 213c477 (第一次作业)
+**/.datasets
+datasets.zip
+**/datasets.zip
