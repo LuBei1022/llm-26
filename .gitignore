@@ -220,3 +220,5 @@ datasets/
 **/.datasets
 datasets.zip
 **/datasets.zip
+model.pt
+**/model.pt
