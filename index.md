@@ -48,16 +48,14 @@ All standard homework assignments are completed by **Week 12**. The final month 
 
 
 ### Course Project
-- **Timeline:** Weeks 13–16 (Dedicated time)
-- **Teams:** 2-3 Students.
+- **Timeline:** Weeks 10–16 (Dedicated time)
+- **Teams:** 3-5 Students (3 members are strongly recommended).
 - **Deliverables:**
+  - **Week 7:** Make your team  members ready
   - **Week 9:** 1-page Project Proposal (Problem, Dataset, Baselines).
-  - **Week 12/13:** Status Check / Preliminary Results (Presentation).
-  - **Week 16:** Final Report
-- **Tracks:**
-  - *Research:* Novel architecture, loss function, or extensive ablation study.
-  - *Application:* End-to-end tool/agent with UI (Streamlit/Gradio).
-  - *Systems:* High-performance inference engine or quantization study.
+  - **Week 12:** Status Check / Preliminary Results (Presentation).
+  - **Week 17:** Final Report / Code submission
+- **[Course project details](https://baojian.github.io/llm-26/final-project/index.html)**
 
 ---
 
