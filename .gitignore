@@ -222,3 +222,14 @@ datasets.zip
 **/datasets.zip
 model.pt
 **/model.pt
+wmt14_small_00.pt
+wmt14_small_01.pt
+wmt14_small_02.pt
+wmt14_small_final.pt
+wmt14_full_00.pt
+wmt14_full_01.pt
+wmt14_full_02.pt
+wmt14_full_03.pt
+wmt14_full_04.pt
+wmt14_full_05.pt
+wmt14_full_final.pt
